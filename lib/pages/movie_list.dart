@@ -39,6 +39,11 @@ class _MovieListState extends State<MovieList>{
               subtitle: Text(
                 'Rating = '+movies[position].voteAverage.toString(),
               ),
+              onTap: (){
+                MaterialPageRoute route = MaterialPageRoute(
+                  builder: (_)=>MovieDetail(movie[position]));
+                Navigator.push(context, route);
+              },
             ),
           );
         },
