@@ -1,6 +1,5 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
+import 'package:praktikum7/pages/movie_detail.dart';
 import 'package:praktikum7/service/http_service.dart';
 
 class MovieList extends StatefulWidget{
@@ -41,7 +40,7 @@ class _MovieListState extends State<MovieList>{
               ),
               onTap: (){
                 MaterialPageRoute route = MaterialPageRoute(
-                  builder: (_)=>MovieDetail(movie[position]));
+                  builder: (_)=>MovieDetail(movies[position]));
                 Navigator.push(context, route);
               },
             ),
